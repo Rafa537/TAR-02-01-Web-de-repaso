@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0px;
+    background-color: #2b3a2c;
+    color: #333333;
+    /* Ancho máximo total de la página. */
+    max-width: 1200px;
+}
+
+/* --- Cabecera y Título --- */
+.header-principal {
+    background-color: #cfe18f;
+    color: #386641;
+    padding: 15px 0px;
+    text-align: center;
+    border-bottom: 3px solid #6a994e;
+}
+
+.titulo-principal {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* --- Menú de Navegación --- */
+.nav-principal {
+    background-color: #6a994e;
+}
+
+.menu {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 5px;
+    padding-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background-color: #386641;
+}
+
+/* --- Submenú Desplegable --- */
+.caja-causas {
+    display: none;
+    position: absolute;
+    background-color: #386641;
+    width: 350px;
+    z-index: 100;
+    list-style: none;
+    padding: 0px;
+    margin-top: 0px;
+    left: -120px;
+}
+
+.caja-causas li {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.caja-causas a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    white-space: normal;
+    line-height: 18px;
+}
+
+.caja-causas a:hover {
+    background-color: #588157;
+}
+
+.causas:hover .caja-causas {
+    display: block;
+}
+
+/* --- Contenido Principal --- */
+.contenedor-principal {
+    background-color: #a7c957;
+    /* 1200px (Body) - 40px (2 x Padding) = 1160px. */
+    width: 1160px;
+    padding: 20px;
+}
+
+.seccion {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    color: #386641;
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6a994e;
+}
+
+/* --- Estructura de Columnas (Usando inline-block) --- */
+.contenedor-inline {
+    font-size: 0px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* 1160px (Ancho del contenedor principal). */
+    width: 1160px;
+}
+
+.columna-33 {
+    display: inline-block;
+    box-sizing: border-box;
+    /* 1160px (Contenedor) / 3 columnas ≈ 386px. */
+    width: 386px;
+    padding: 0px 10px;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+/* Estilo para las Tarjetas de Contenido */
+.tarjeta, .tarjeta-grande {
+    background-color: #cfe18f;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: justify;
+    min-height: 100px;
+    margin: 10px;
+    /* 386px (Columna W) - 20px (Columna P) - 20px (Tarjeta M) = 346px. */
+    width: 346px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    overflow: hidden;
+}
+
+.tarjeta-img {
+    /* 100% del espacio interno de 306px (346px - 40px de Padding). */
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Pie de Página --- */
+.footer-privacidad {
+    background-color: #386641;
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 14px;
+    height: 163px;
+    /* 100% del body (1200px). */
+    width: 100%;
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #9df83c;
+    background-color: #15b632;
+    border-radius: 2px;
+    border: 2px solid black;
+    width: 500px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(22, 19, 24);
+    background-color: rgb(36, 237, 83);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla página Causas */
+.tarjeta-ancho-completo {
+    background-color: #cfe18f;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto; 
+    /* CÁLCULO: 1160px (Cont. Principal) - 40px (2x Padding) = 1120px */
+    width: 1120px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.tabla-climatica {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
+}
+
+.tabla-climatica thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tabla-climatica th,
+.tabla-climatica td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}

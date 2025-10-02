@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="medidas.css">
+    </head>
+    <body>
+        <header class="header-principal">
+            <div class="titulo-principal">Registro</div>
+        </header>
+        <nav class="nav-principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html">Registro</a></li>
+                <li class="causas">
+                    <a href="causas.html">Otros tipos de causas (despliegue con submenú)</a>
+                    <ul class="caja-causas">
+                        <li><a href="causas.html#mecanismos">Mecanismos de adaptación de las plantas</a></li>
+                        <li><a href="causas.html#ayuda">¿Qué podemos hacer para ayudar a las plantas?</a></li>
+                        <li><a href="causas.html#afecta">Cómo afecta a las plantas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main class="contenedor-principal">
+            <h2 class="titulo-seccion">Formulario</h2>
+            <form action="recoger.php" method="post">
+                <fieldset>
+                    <legend>Sección 1: Información básica</legend>
+                    <label for="nombre">Nombre (opcional):</label><br>
+                    <input type="text" id="nombre" name="nombre"><br><br>
+
+                    <label for="email">Correo electrónico (opcional):</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label for="ubicacion">Ubicación (país/región):</label><br>
+                    <select id="ubicacion" name="ubicacion">
+                        <option value="">Seleccione...</option>
+                        <option value="España">España</option>
+                        <option value="México">México</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Perú">Perú</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Otro">Otro</option>
+                    </select><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Sección 2: Prácticas de cuidado de plantas</legend>
+                    <label>¿Qué tipo de plantas cultivas principalmente?</label><br>
+                    <input type="checkbox" id="nativas" name="plantas[]" value="Plantas nativas de mi región">
+                    <label for="nativas">Plantas nativas de mi región</label><br>
+                    <input type="checkbox" id="alimentos" name="plantas[]" value="Cultivos de alimentos (hortalizas, frutas)">
+                    <label for="alimentos">Cultivos de alimentos (hortalizas, frutas)</label><br>
+                    <input type="checkbox" id="ornamentales" name="plantas[]" value="Plantas ornamentales">
+                    <label for="ornamentales">Plantas ornamentales</label><br>
+                    <input type="checkbox" id="cactus" name="plantas[]" value="Cactus y suculentas (resistentes a la sequía)">
+                    <label for="cactus">Cactus y suculentas (resistentes a la sequía)</label><br>
+                    <input type="checkbox" id="noplantas" name="plantas[]" value="No tengo plantas">
+                    <label for="noplantas">No tengo plantas</label><br><br>
+
+                    <label>¿Cómo obtienes el agua para regar tus plantas?</label><br>
+                    <input type="checkbox" id="llave" name="agua[]" value="Agua de la llave">
+                    <label for="llave">Agua de la llave</label><br>
+                    <input type="checkbox" id="lluvia" name="agua[]" value="Recolección de agua de lluvia">
+                    <label for="lluvia">Recolección de agua de lluvia</label><br>
+                    <input type="checkbox" id="reutilizo" name="agua[]" value="Reutilizo agua (por ejemplo, del lavado de vegetales)">
+                    <label for="reutilizo">Reutilizo agua (por ejemplo, del lavado de vegetales)</label><br>
+                    <input type="checkbox" id="noriego" name="agua[]" value="No riego (solo uso plantas que no lo necesitan)">
+                    <label for="noriego">No riego (solo uso plantas que no lo necesitan)</label><br><br>
+
+                    <label>¿Usas fertilizantes?</label><br>
+                    <input type="radio" id="quimicos" name="fertilizante" value="Sí, químicos">
+                    <label for="quimicos">Sí, químicos</label><br>
+                    <input type="radio" id="compost" name="fertilizante" value="Sí, compost o abono orgánico">
+                    <label for="compost">Sí, compost o abono orgánico</label><br>
+                    <input type="radio" id="nofertilizante" name="fertilizante" value="No uso">
+                    <label for="nofertilizante">No uso</label><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Sección 3: Acepta los términos y condiciones</legend>
+                    <input type="checkbox" id="acepta" name="acepta" value="si" required>
+                    <label for="acepta">Aceptar términos y condiciones</label><br><br>
+                </fieldset>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </form>
+        </main>
+        <footer class="footer-privacidad">
+            Política de privacidad de la página web
+        </footer>
+    </body>
+</html>
